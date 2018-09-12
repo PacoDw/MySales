@@ -1,14 +1,30 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:MySales"
+             xmlns:local="clr-namespace:MySales;assembly=MySales"
+             xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+             android:TabbedPage.ToolbarPlacement="Bottom"
+             android:TabbedPage.BarItemColor="white"
+             android:TabbedPage.BarSelectedItemColor="black"
+             BarBackgroundColor="#2196F3"
+             BarTextColor="White"
              x:Class="MySales.MainPage">
 
-    <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
-    </StackLayout>
+    <NavigationPage Title="Sales" Icon="sales.png">
+        <x:Arguments>
+            <local:Sales />
+        </x:Arguments>
+    </NavigationPage>
 
-</ContentPage>
+    <NavigationPage Title="Graphics" Icon="graphics.png">
+        <x:Arguments>
+            <local:Graphics />
+        </x:Arguments>
+    </NavigationPage>
+
+    <NavigationPage Title="Options" Icon="options.png">
+        <x:Arguments>
+            <local:Options />
+        </x:Arguments>
+    </NavigationPage>
+</TabbedPage>

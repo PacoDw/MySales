@@ -8,9 +8,11 @@ namespace MySales
     public partial class App : Application
     {
         public App()
-        {
+        {   
+            #if DEBUG
+            LiveReload.Init();
+            #endif
             InitializeComponent();
-
             MainPage = new MainPage();
         }
 

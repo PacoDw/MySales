@@ -157,4 +157,25 @@
       <Name>MySales</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\camera.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\graphics.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\options.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ready.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\sales.png" />
+  </ItemGroup>
 </Project>
