@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MySales.Products"
+             Title="Products">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem 
+            Name="addProduct" 
+            Order="Primary" 
+            Icon="add1.png" 
+            Text="Add a product" 
+            Priority="0" 
+            Clicked="addProduct_Clicked" />
+    </ContentPage.ToolbarItems>
+</ContentPage>

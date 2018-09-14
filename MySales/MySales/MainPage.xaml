@@ -4,10 +4,10 @@
              xmlns:local="clr-namespace:MySales;assembly=MySales"
              xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
              android:TabbedPage.ToolbarPlacement="Bottom"
-             android:TabbedPage.BarItemColor="white"
+             android:TabbedPage.BarItemColor="#2196F3"
              android:TabbedPage.BarSelectedItemColor="black"
-             BarBackgroundColor="#2196F3"
-             BarTextColor="White"
+             BarBackgroundColor="#f2f2f2"
+             BarTextColor="#2196F3"
              x:Class="MySales.MainPage">
 
     <NavigationPage Title="Sales" Icon="sales.png">

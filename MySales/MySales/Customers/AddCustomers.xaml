@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MySales.AddCustomers"
+             Title="Add a customer">
+
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem 
+            Name="saveCustomer" 
+            Order="Primary" 
+            Icon="ready.png" 
+            Text="Save a customer" 
+            Priority="0" 
+            Clicked="saveCustomer_Clicked" />
+        
+        <ToolbarItem 
+            Name="takePictureCustomer" 
+            Order="Primary" 
+            Icon="camera.png" 
+            Text="Take a customer picture" 
+            Priority="1" 
+            Clicked="takePictureCustomer_Clicked" />
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Margin="35,15,15,15">
+                <StackLayout HorizontalOptions="Center" Orientation="Horizontal">
+                    <Image x:Name="pictureCustomer" />
+                </StackLayout>
+
+                <Label Text="Name" FontSize="Medium"/>
+                <Entry x:Name="name"/>
+
+                <Label Text="Phone" FontSize="Medium"/>
+                <Entry x:Name="phone" Keyboard="Numeric"/>
+
+                <Label Text="Email" FontSize="Medium"/>
+                <Entry x:Name="email" Keyboard="Email"/>
+
+                <Label Text="Coments:" FontSize="Medium"/>
+                <Editor x:Name="coments" HeightRequest="100"/>
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

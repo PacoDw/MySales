@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MySales.AddSales"
+             Title="AddSales">
+
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Name="saveSale" Order="Primary" Icon="ready.png" Text="Save" Priority="0" Clicked="saveSale_Clicked" />
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Margin="35,15,15,15">
+                <Label Text="Date" FontSize="Medium"/>
+                <DatePicker x:Name="dateSale"
+                      Format="dd/MM/yy"
+                      Margin="0, 0, 0, 30"
+                      DateSelected="OnDateSelected" />
+
+                <Button Text="Add a customer" Margin="5" FontSize="Medium" Clicked="addCustomer_Clicked" BackgroundColor="Orange" TextColor="White" BorderRadius="22"/>
+                <Button Text="Add a product" Margin="5" FontSize="Medium" Clicked="addProduct_Clicked" BackgroundColor="Orange" TextColor="White" BorderRadius="22"/>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                    <Label Text="It's paid"/>
+                    <Switch x:Name="paid"/>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

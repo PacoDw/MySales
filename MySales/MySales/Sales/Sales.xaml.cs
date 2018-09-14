@@ -14,13 +14,13 @@ namespace MySales
 	{
 		public Sales ()
 		{
-			InitializeComponent ();
+            InitializeComponent();
 		}
 
 
-        private void addSale_Clicked(object sender, EventArgs e)
+        async private void addSale_Clicked(object sender, EventArgs e)
         {
-            //await Navigation.PushAsync(new addSale());
+            await Navigation.PushAsync(new AddSales());
         }
 
         private void salesList_ItemTapped(object sender, ItemTappedEventArgs e)

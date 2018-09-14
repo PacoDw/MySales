@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MySales.AddProducts"
+             Title="Add a product">
+
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem 
+            Name="saveProduct" 
+            Order="Primary" 
+            Icon="ready.png" 
+            Text="Save a product" 
+            Priority="0" 
+            Clicked="saveProduct_Clicked" />
+
+        <ToolbarItem 
+            Name="takePictureProduct" 
+            Order="Primary" 
+            Icon="camera.png" 
+            Text="Take a product picture" 
+            Priority="1" 
+            Clicked="takePictureProduct_Clicked" />
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Margin="35,15,15,15">
+                <StackLayout HorizontalOptions="Center" Orientation="Horizontal">
+                    <Image x:Name="pictureProduct" />
+                </StackLayout>
+
+                <Label Text="Name" FontSize="Medium"/>
+                <Entry x:Name="name"/>
+
+                <Label Text="Sale price" FontSize="Medium"/>
+                <Entry x:Name="sale_price" Keyboard="Numeric"/>
+
+                <Label Text="count" FontSize="Medium"/>
+                <Entry x:Name="count" Keyboard="Numeric"/>
+
+                <Label Text="Cost price" FontSize="Medium"/>
+                <Entry x:Name="cost_price" Keyboard="Numeric"/>
+
+                <Label Text="Description:" FontSize="Medium"/>
+                <Editor x:Name="description" HeightRequest="100"/>
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

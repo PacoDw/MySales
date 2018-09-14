@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MySales.Sales"
+             Title="Sales">
+
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem 
+            Text="Add A Sale"
+            Name="addSale" 
+            Order="Primary" 
+            Icon="add.png" 
+            Priority="0"
+            Clicked="addSale_Clicked"
+        />
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="white">
+            <ListView x:Name="salesList" HasUnevenRows="True"  Margin="15,5,15,15" ItemTapped="salesList_ItemTapped">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Vertical">
+                                <Label Text="Name" FontSize="Large" FontAttributes="Bold"/>
+                                <Label Text="{Binding name_customer}" FontSize="Medium" TextColor="Gray"></Label>
+
+                                <Label Text="Sale price" FontSize="Large" FontAttributes="Bold"/>
+                                <Label Text="{Binding sale_price}" TextColor="Gray" FontSize="Medium"></Label>
+
+                                <Label Text="Date" FontSize="Large" FontAttributes="Bold"/>
+                                <Label Text="{Binding date}" TextColor="Gray" FontSize="Medium"></Label>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
