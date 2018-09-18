@@ -31,11 +31,19 @@ namespace MySales
 
         private async Task SelectCustomer(object sender, ItemTappedEventArgs e)
         {
-            await DisplayAlert("Detail customer", "Detail customer", "ok");
-            //var selectedCustomer = e.Item as CustomersModel;
-            //var detailCustomer = new DetailCustomer();
-            //detailCustomer.BindingContext = selectedCustomer;
-            //await Navigation.PushAsync(detailCustomer);
+            if (await DisplayAlert("Information", "What do you want?", "Edit", "Choose"))
+            {
+                var selectedCustomer = e.Item as CustomersModel;
+                var customerDetails = new CustomerDetails();
+                customerDetails.BindingContext = selectedCustomer;
+                await Navigation.PushAsync(customerDetails);
+            }
+            else
+            {
+                var selectedCustomer = e.Item as CustomersModel;
+                MessagingCenter.Send<Customers, CustomersModel>(this, "context", selectedCustomer);
+                await Navigation.PopAsync();
+            }
         }
     }
 }

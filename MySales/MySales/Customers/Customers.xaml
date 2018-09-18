@@ -21,10 +21,9 @@
                     <DataTemplate>
                         <ViewCell>
                             <StackLayout Orientation="Horizontal">
-                                <Frame BorderColor="Snow"  Margin="5" CornerRadius="100" WidthRequest="50" HeightRequest="50">
-                                    <Image Source="{Binding picture_customer}" Aspect="AspectFit" HeightRequest="50" WidthRequest="50" HorizontalOptions="EndAndExpand" Margin="5"/>
-                                </Frame>
+                                <Image Source="{Binding picture_customer}" Aspect="AspectFit" HeightRequest="50" WidthRequest="50" HorizontalOptions="EndAndExpand" Margin="5"/>
                                 <Label Text="{Binding name}"  VerticalOptions="Center" FontSize="Large" TextColor="Black"></Label>
+                                <Label x:Name="id_customer" Text="{Binding id_customer}" IsVisible="False"></Label>
                             </StackLayout>
                         </ViewCell>
                     </DataTemplate>

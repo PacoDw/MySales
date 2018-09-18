@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MySales.CustomerDetails"
+             Title="Customer Details">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem 
+            Name="updateCustomer" 
+            Order="Primary" 
+            Icon="ready.png" 
+            Text="Update a customer" 
+            Priority="0" 
+            Clicked="updateCustomer_Clicked" />
+
+        <ToolbarItem 
+            Name="deleteCustomer" 
+            Order="Primary" 
+            Icon="delete.png" 
+            Text="Delete a customer" 
+            Priority="1" 
+            Clicked="deleteCustomer_Clicked" />
+    </ContentPage.ToolbarItems>
+
+    <ScrollView>
+        <StackLayout>
+            <Image Source="{Binding picture_customer}" Aspect="AspectFit" HeightRequest="350" WidthRequest="350"  Margin="5"/>
+
+            <StackLayout Margin="35,15,15,15">
+                <Label x:Name="id_customer" Text="{Binding id_customer}" IsVisible="False"/>
+                
+                <Label Text="Name" FontSize="Medium"/>
+                <Entry x:Name="name" Text="{Binding name}" />
+
+                <Label Text="Phone" FontSize="Medium"/>
+                <Entry x:Name="phone" Text="{Binding phone}" />
+
+                <Label Text="Email" FontSize="Medium"/>
+                <Entry x:Name="email" Text="{Binding email}" />
+                
+                <Label Text="Comments" FontSize="Medium"/>
+                <Entry x:Name="comments" Text="{Binding comments}" />
+
+                <Entry x:Name="picture_customer" Text="{Binding picture_customer}" IsVisible="False"/>
+
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
