@@ -11,6 +11,6 @@ namespace MySales
         public int phone { get; set; }
         public string email { get; set; }
         public string comments { get; set; }
-        public string image { get; set; }
+        public string picture_customer { get; set; }
     }
 }

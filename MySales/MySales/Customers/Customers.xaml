@@ -14,4 +14,23 @@
             Clicked="addCustomer_Clicked" />
     </ContentPage.ToolbarItems>
 
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="White">
+            <ListView x:Name="lst" HasUnevenRows="True"  Margin="15,5,15,15" ItemTapped="SelectCustomer">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+                                <Frame BorderColor="Snow"  Margin="5" CornerRadius="100" WidthRequest="50" HeightRequest="50">
+                                    <Image Source="{Binding picture_customer}" Aspect="AspectFit" HeightRequest="50" WidthRequest="50" HorizontalOptions="EndAndExpand" Margin="5"/>
+                                </Frame>
+                                <Label Text="{Binding name}"  VerticalOptions="Center" FontSize="Large" TextColor="Black"></Label>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+
 </ContentPage>
