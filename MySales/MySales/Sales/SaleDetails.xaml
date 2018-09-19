@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MySales.SaleDetails"
+             Title="Sale Details">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem 
+            Name="updateSale" 
+            Order="Primary" 
+            Icon="ready.png" 
+            Text="Update a sale" 
+            Priority="0" 
+            Clicked="updateSale_Clicked" />
+
+        <ToolbarItem 
+            Name="deleteSale" 
+            Order="Primary" 
+            Icon="delete.png" 
+            Text="Delete a sale" 
+            Priority="1" 
+            Clicked="deleteSale_Clicked" />
+    </ContentPage.ToolbarItems>
+
+    <ScrollView>
+        <StackLayout>
+            <StackLayout Margin="15,15,15,15">
+                <Label x:Name="id_sale" Text="{Binding id_sale}" IsVisible="False"/>
+
+                <Label Text="Date" FontSize="Large" FontAttributes="Bold" TextColor="Black" />
+                <DatePicker x:Name="dateSale"
+                      Format="dd/MM/yy"
+                      FontSize="Large"
+                      Date="{Binding date}"
+                      DateSelected="OnDateSelected" />
+
+                <Label Text="Is it paid?" FontSize="Large" FontAttributes="Bold" TextColor="Black" />
+                <Switch x:Name="pay" IsToggled="{Binding pay}" HorizontalOptions="Center"/>
+
+                <Label Text="Customer name" FontSize="Large" FontAttributes="Bold" TextColor="Black" />
+                <Entry x:Name="customer_name" Text="{Binding customer_name}" />
+
+                <Label Text="Sale price" FontSize="Large" FontAttributes="Bold" TextColor="Black" />
+                <Entry x:Name="sale_price" Text="{Binding sale_price}" />
+
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>

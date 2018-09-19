@@ -15,17 +15,26 @@ namespace MySales
 		public Sales ()
 		{
             InitializeComponent();
-		}
+            this.Appearing += sales_appearing;
+        }
 
+        async private void sales_appearing(object sender, EventArgs e)
+        {
+            lst.ItemsSource = null;
+            lst.ItemsSource = await App.MySalesDB.Table<SalesModel>().ToListAsync();
+        }
 
         async private void addSale_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new AddSales());
         }
 
-        private void salesList_ItemTapped(object sender, ItemTappedEventArgs e)
+        private async Task selectSale(object sender, ItemTappedEventArgs e)
         {
-
+            var selectedSale = e.Item as SalesModel;
+            var saleDetails = new SaleDetails();
+            saleDetails.BindingContext = selectedSale;
+            await Navigation.PushAsync(saleDetails);
         }
     }
 }
