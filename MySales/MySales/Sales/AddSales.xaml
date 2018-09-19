@@ -17,6 +17,12 @@
                       Margin="0, 0, 0, 30"
                       DateSelected="OnDateSelected" />
 
+                <StackLayout Orientation="Horizontal">
+                    <Image Source="{Binding picture_customer}" Aspect="AspectFit" HeightRequest="50" WidthRequest="50" HorizontalOptions="EndAndExpand" Margin="5"/>
+                    <Label Text="{Binding name}"  VerticalOptions="Center" FontSize="Large" TextColor="Black"></Label>
+                    <Label x:Name="id_customer" Text="{Binding id_customer}" IsVisible="False"></Label>
+                </StackLayout>
+
                 <Button Text="Add a customer" Margin="5" FontSize="Medium" Clicked="addCustomer_Clicked" BackgroundColor="Orange" TextColor="White" BorderRadius="22"/>
                 <Button Text="Add a product" Margin="5" FontSize="Medium" Clicked="addProduct_Clicked" BackgroundColor="Orange" TextColor="White" BorderRadius="22"/>
                 <StackLayout Orientation="Horizontal" HorizontalOptions="Center">

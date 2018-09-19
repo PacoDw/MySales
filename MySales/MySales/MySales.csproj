@@ -11,6 +11,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Update="CustomerDetails.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Products\AddProducts.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>

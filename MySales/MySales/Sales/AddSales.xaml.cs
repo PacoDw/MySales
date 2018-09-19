@@ -14,7 +14,11 @@ namespace MySales
 		public AddSales ()
 		{
 			InitializeComponent ();
-		}
+
+            MessagingCenter.Subscribe<Customers, CustomersModel>(this, "context", (sender, arg) => {
+                this.BindingContext = arg;
+            });
+        }
 
         private void saveSale_Clicked(object sender, EventArgs e)
         {
