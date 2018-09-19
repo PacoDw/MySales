@@ -25,24 +25,24 @@
 
     <ContentPage.Content>
         <ScrollView>
-            <StackLayout Margin="35,15,15,15">
+            <StackLayout Margin="15,15,15,15">
                 <StackLayout HorizontalOptions="Center" Orientation="Horizontal">
-                    <Image x:Name="pictureProduct" />
+                    <Image x:Name="product_picture" />
                 </StackLayout>
 
-                <Label Text="Name" FontSize="Medium"/>
-                <Entry x:Name="name"/>
+                <Label Text="Name" FontSize="Large"/>
+                <Entry x:Name="product_name"/>
 
-                <Label Text="Sale price" FontSize="Medium"/>
+                <Label Text="Sale price" FontSize="Large"/>
                 <Entry x:Name="sale_price" Keyboard="Numeric"/>
 
-                <Label Text="count" FontSize="Medium"/>
+                <Label Text="count" FontSize="Large"/>
                 <Entry x:Name="count" Keyboard="Numeric"/>
 
-                <Label Text="Cost price" FontSize="Medium"/>
+                <Label Text="Cost price" FontSize="Large"/>
                 <Entry x:Name="cost_price" Keyboard="Numeric"/>
 
-                <Label Text="Description:" FontSize="Medium"/>
+                <Label Text="Description:" FontSize="Large"/>
                 <Editor x:Name="description" HeightRequest="100"/>
 
             </StackLayout>

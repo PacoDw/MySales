@@ -13,4 +13,22 @@
             Priority="0" 
             Clicked="addProduct_Clicked" />
     </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="White">
+            <ListView x:Name="lst" HasUnevenRows="True"  Margin="15,5,15,15" ItemTapped="SelectProduct">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+                                <Image Source="{Binding product_picture}" Aspect="AspectFit" HeightRequest="100" WidthRequest="100" HorizontalOptions="Start" Margin="5"/>
+                                <Label Text="{Binding product_name}"  VerticalOptions="Center" HorizontalOptions="StartAndExpand" FontSize="Large" TextColor="Black"></Label>
+                                <Label x:Name="id_customer" Text="{Binding id_product}" IsVisible="False"></Label>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
 </ContentPage>

@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MySales.ProductDetails"
+             Title="Product Details">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem 
+            Name="updateProduct" 
+            Order="Primary" 
+            Icon="ready.png" 
+            Text="Update a product" 
+            Priority="0" 
+            Clicked="updateProduct_Clicked" />
+
+        <ToolbarItem 
+            Name="deleteProduct" 
+            Order="Primary" 
+            Icon="delete.png" 
+            Text="Delete a Producto" 
+            Priority="1" 
+            Clicked="deleteProduct_Clicked" />
+    </ContentPage.ToolbarItems>
+
+    <ScrollView>
+        <StackLayout>
+            <Image Source="{Binding product_picture}" Aspect="AspectFit" HeightRequest="350" WidthRequest="350"  Margin="5"/>
+
+            <StackLayout Margin="15,15,15,15">
+                <Label x:Name="id_product" Text="{Binding id_product}" IsVisible="False"/>
+
+                <Label Text="Name" FontSize="Large"/>
+                <Entry x:Name="product_name" Text="{Binding product_name}" />
+
+                <Label Text="Sale price" FontSize="Large"/>
+                <Entry x:Name="sale_price" Text="{Binding sale_price}" />
+
+                <Label Text="Count" FontSize="Large"/>
+                <Entry x:Name="count" Text="{Binding count}" />
+
+                <Label Text="Cost price" FontSize="Large"/>
+                <Entry x:Name="cost_price" Text="{Binding cost_price}" />
+
+                <Label Text="Description" FontSize="Large"/>
+                <Entry x:Name="description" Text="{Binding description}" />
+
+                <Entry x:Name="product_picture" Text="{Binding product_picture}" IsVisible="False"/>
+
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
