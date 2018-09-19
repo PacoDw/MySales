@@ -7,10 +7,10 @@ namespace MySales
     {
         [AutoIncrement, PrimaryKey]
         public int id_customer { get; set; }
-        public string name { get; set; }
+        public string customer_name { get; set; }
         public int phone { get; set; }
         public string email { get; set; }
         public string comments { get; set; }
-        public string picture_customer { get; set; }
+        public string customer_picture { get; set; }
     }
 }
