@@ -25,21 +25,21 @@
 
     <ContentPage.Content>
         <ScrollView>
-            <StackLayout Margin="35,15,15,15">
+            <StackLayout Margin="15,15,15,15">
                 <StackLayout HorizontalOptions="Center" Orientation="Horizontal">
-                    <Image x:Name="picture_customer" Aspect="AspectFit" HeightRequest="350" WidthRequest="350"  Margin="5"/>
+                    <Image x:Name="customer_picture" Aspect="AspectFit" HeightRequest="350" WidthRequest="350"  Margin="5"/>
                 </StackLayout>
 
-                <Label Text="Name" FontSize="Medium"/>
-                <Entry x:Name="name"/>
+                <Label Text="Name" FontSize="Large"/>
+                <Entry x:Name="customer_name"/>
 
-                <Label Text="Phone" FontSize="Medium"/>
+                <Label Text="Phone" FontSize="Large"/>
                 <Entry x:Name="phone" Keyboard="Numeric"/>
 
-                <Label Text="Email" FontSize="Medium"/>
+                <Label Text="Email" FontSize="Large"/>
                 <Entry x:Name="email" Keyboard="Email"/>
 
-                <Label Text="Coments:" FontSize="Medium"/>
+                <Label Text="Coments:" FontSize="Large"/>
                 <Editor x:Name="comments" HeightRequest="100"/>
 
             </StackLayout>

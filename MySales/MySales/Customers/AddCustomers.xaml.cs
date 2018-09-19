@@ -18,7 +18,7 @@ namespace MySales
 	public partial class AddCustomers : ContentPage
 	{
 
-        private string _picture_customer;
+        private string _customer_picture;
 
         public AddCustomers ()
 		{
@@ -29,18 +29,17 @@ namespace MySales
         {
             var newCustomer = new CustomersModel
             {
-                name = name.Text,
+                customer_name = customer_name.Text,
                 phone = int.Parse(phone.Text),
                 email = email.Text,
                 comments = comments.Text,
-                picture_customer = _picture_customer
+                customer_picture = _customer_picture
             };
             App.MySalesDB.InsertAsync(newCustomer);
             DisplayAlert("Success!", "The customer was added!", "ok");
 
             Navigation.PopAsync(true);
         }
-
 
         async private void takePictureCustomer_Clicked(object sender, EventArgs e)
         {
@@ -62,8 +61,8 @@ namespace MySales
             if (file == null)
                 return;
 
-            _picture_customer = file.Path;
-            picture_customer.Source = file.Path;
+            _customer_picture = file.Path;
+            customer_picture.Source = file.Path;
         }
     }
 }

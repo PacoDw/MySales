@@ -21,8 +21,8 @@
                     <DataTemplate>
                         <ViewCell>
                             <StackLayout Orientation="Horizontal">
-                                <Image Source="{Binding picture_customer}" Aspect="AspectFit" HeightRequest="50" WidthRequest="50" HorizontalOptions="EndAndExpand" Margin="5"/>
-                                <Label Text="{Binding name}"  VerticalOptions="Center" FontSize="Large" TextColor="Black"></Label>
+                                <Image Source="{Binding customer_picture}" Aspect="AspectFit" HeightRequest="100" WidthRequest="100" HorizontalOptions="Start" Margin="5"/>
+                                <Label Text="{Binding customer_name}"  VerticalOptions="Center" HorizontalOptions="Start" FontSize="Large" TextColor="Black"></Label>
                                 <Label x:Name="id_customer" Text="{Binding id_customer}" IsVisible="False"></Label>
                             </StackLayout>
                         </ViewCell>

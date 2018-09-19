@@ -42,7 +42,7 @@ namespace MySales
             {
                 var selectedCustomer = e.Item as CustomersModel;
                 MessagingCenter.Send<Customers, CustomersModel>(this, "context", selectedCustomer);
-                await Navigation.PopAsync();
+                await Navigation.PopAsync(true);
             }
         }
     }
