@@ -16,7 +16,15 @@ namespace MySales
 			InitializeComponent ();
 
             MessagingCenter.Subscribe<Customers, CustomersModel>(this, "context", (sender, arg) => {
-                this.BindingContext = arg;
+                customer_picture.Source = arg.customer_picture;
+                customer_name.Text = arg.customer_name;
+                id_customer.Text = arg.id_customer.ToString();
+            });
+
+            MessagingCenter.Subscribe<Products, ProductsModel>(this, "context", (sender, arg) => {
+                product_picture.Source = arg.product_picture;
+                product_name.Text = arg.product_name;
+                id_product.Text = arg.id_product.ToString();
             });
         }
 

@@ -24,13 +24,13 @@
                         <ViewCell>
                             <StackLayout Orientation="Vertical">
                                 <Label Text="Name" FontSize="Large" FontAttributes="Bold"/>
-                                <Label Text="{Binding name_customer}" FontSize="Medium" TextColor="Gray"></Label>
+                                <Label Text="{Binding customer_name}" FontSize="Large" TextColor="Gray"></Label>
 
                                 <Label Text="Sale price" FontSize="Large" FontAttributes="Bold"/>
-                                <Label Text="{Binding sale_price}" TextColor="Gray" FontSize="Medium"></Label>
+                                <Label Text="{Binding sale_price}" TextColor="Gray" FontSize="Large"></Label>
 
                                 <Label Text="Date" FontSize="Large" FontAttributes="Bold"/>
-                                <Label Text="{Binding date}" TextColor="Gray" FontSize="Medium"></Label>
+                                <Label Text="{Binding date}" TextColor="Gray" FontSize="Large"></Label>
                             </StackLayout>
                         </ViewCell>
                     </DataTemplate>
