@@ -23,7 +23,7 @@
     <EmbeddedResource Update="Customers\AddCustomers.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="SaleDetails.xaml">
+    <EmbeddedResource Update="Sales\SaleDetails.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Sales\AddSales.xaml">

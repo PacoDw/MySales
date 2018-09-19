@@ -17,7 +17,7 @@
     </ContentPage.ToolbarItems>
 
     <ContentPage.Content>
-        <StackLayout BackgroundColor="white">
+        <StackLayout>
             <ListView x:Name="lst" HasUnevenRows="True"  Margin="15,5,15,15" ItemTapped="selectSale">
                 <ListView.ItemTemplate>
                     <DataTemplate>

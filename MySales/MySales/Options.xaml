@@ -5,10 +5,9 @@
              Title="Options">
     
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to OPTIONS!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <StackLayout Orientation="Vertical" VerticalOptions="Center" >
+            <Button x:Name="customersButton" Text="Customers" Margin="5" FontSize="Large"  BackgroundColor="orange" TextColor="White" />
+            <Button x:Name="productsButton" Text="Products" Margin="5" FontSize="Large"  BackgroundColor="orange" TextColor="White" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

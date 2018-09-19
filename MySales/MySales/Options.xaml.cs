@@ -15,6 +15,17 @@ namespace MySales
 		public Options ()
 		{
 			InitializeComponent ();
-		}
-	}
+
+            productsButton.Clicked += (sender, args) =>
+            {
+                Navigation.PushAsync(new Products());
+
+            };
+
+            customersButton.Clicked += (sender, args) =>
+            {
+                Navigation.PushAsync(new Customers());
+            };
+        }
+    }
 }
