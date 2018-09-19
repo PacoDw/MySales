@@ -26,6 +26,7 @@
                 <StackLayout Orientation="Horizontal">
                     <Image x:Name="product_picture" Aspect="AspectFit" HeightRequest="100" WidthRequest="100" HorizontalOptions="Start" />
                     <Label x:Name="product_name"  VerticalOptions="Center" HorizontalOptions="StartAndExpand" FontAttributes="Bold" FontSize="Large" TextColor="Black"></Label>
+                    <Label x:Name="sale_price" IsVisible="False"></Label>
                     <Label x:Name="id_product" IsVisible="False"></Label>
                 </StackLayout>
                 <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
